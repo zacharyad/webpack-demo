@@ -1,0 +1,17 @@
+button {
+  height: 300px;
+  width: 300px;
+  font-size: 40px;
+  background-color: plum;
+  color: #23232310;
+  border-radius: 50px;
+}
+
+button:hover {
+  height: 300px;
+  width: 300px;
+  font-size: 40px;
+  background-color: plum;
+  color: #232323;
+  border-radius: 50px;
+}
