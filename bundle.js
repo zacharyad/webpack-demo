@@ -16,7 +16,7 @@
   \*****************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"logSomeStuff\": () => (/* binding */ logSomeStuff),\n/* harmony export */   \"reset\": () => (/* binding */ reset)\n/* harmony export */ });\n// IIFE --> phonetically iffy\n\n\n  let numTimesClicked = 0;\n\n  function win() {\n    alert('You win!');\n    reset();\n  }\n\n  // this gets put into an object\n  function reset() {\n    numTimesClicked = 0;\n  }\n// this gets put into an object\n  function logSomeStuff(str){\n    console.log(\"some stuff HEYHEYHEYHEYHEYHEY _________\", str)\n  }\n    \n\n// export  \n /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {\n  numTimesClicked++;\n  console.log(\"You clicked\", numTimesClicked);\n  if (numTimesClicked === 10) win();\n}\n\n// default exports this is a variable you can reference\n\n\n// one default, and as many named exports as you want\n\n\n\n// what is click = function() {\n  //   numTimesClicked++;\n  //   console.log(\"You clicked\");\n  //   if (numTimesClicked === 10) win();\n  // }\n\n\n\n/*\n  1) look at simple App\n  2) What are issues with this app?\n  3) Make it secure\n  4) Make it like node modules, to \"share\" code accross js files\n  \n  webpack = module bundler\n  1) we need that sweet npm code\n  2) we need to stell webpack what to do.\n    webpack.config.js\n\n\n*/\n\n\n\n//# sourceURL=webpack://webpack-intro/./game.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"consoleThatLog\": () => (/* binding */ consoleThatLog),\n/* harmony export */   \"reset\": () => (/* binding */ reset),\n/* harmony export */   \"default\": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n  // IIFE, phonetically Iffy\n\n    let numTimesClicked = 0;\n\n     function win() {\n      alert('You win!');\n      reset();\n    }\n\n    function consoleThatLog(){\n      console.log(\"hey i was logged\")\n    }\n    \n    function reset() {\n      numTimesClicked = 0;\n    }\n    \n\n  //)()\n\n\n  // we can default export one thing and one thing only\n/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {\n  numTimesClicked++;\n  console.log(\"cat\");\n  if (numTimesClicked === 10) win();\n}\n\n\n  // click() //  is equal to ---> \n    //function() {\n    //   numTimesClicked++;\n    //   console.log(\"You've been clicked.\");\n    //   if (numTimesClicked === 10) win();\n    // }\n\n \n  \n  \n/*\n  1) look at simple App\n  2) What are issues with this app?\n  3) Make it secure\n  4) Make it like node modules, to \"share\" code accross js files\n  \n  webpack = module bundler\n  1) we need to install webpack and webpack-cli [ x ]\n  2) add script to package.json to build your files into a bundle\n  3) configure webpack\n\n\n*/\n\n\n\n//# sourceURL=webpack://webpack-intro/./game.js?");
 
 /***/ }),
 
@@ -26,17 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _game_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game.js */ \"./game.js\");\n/* harmony import */ var _rando_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rando.js */ \"./rando.js\");\nconst btn = document.getElementById('button');\n\n\n// node modules --> import from\n// import click from './game.js'\n// import {logSomeStuff, reset} from './game.js'\n\n// entry is where all the code is going to be imported\n\n\nbtn.addEventListener('click', function() {\n  (0,_game_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  loggy(_rando_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n});\n\n/*  \n    THREE MINUTES TO LOOK AT THESE FILES (main.js, index.html, )\n    AND THEN TELL ME WHAT WILL BE/IS GOING ON IN THE \"APP\".\n*/\n\n\n\n//# sourceURL=webpack://webpack-intro/./main.js?");
-
-/***/ }),
-
-/***/ "./rando.js":
-/*!******************!*\
-  !*** ./rando.js ***!
-  \******************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"this string\");\n\n//# sourceURL=webpack://webpack-intro/./rando.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _game__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game */ \"./game.js\");\nconst button = document.getElementById('button');\n// const click = require(\"./game.js\") this is no good in the front end\n \n//  import {consoleThatLog as c, reset} from './game'\n\n (0,_game__WEBPACK_IMPORTED_MODULE_0__.consoleThatLog)();\nbutton.addEventListener('click', function() {\n  clickTheButtonFunc();\n});\n\n/*  \n    THREE MINUTES TO LOOK AT THESE FILES \n    AND THEN TELL ME WHAT WILL BE/IS GOING ON IN THE \"APP\".\n*/\n\n\n\n//# sourceURL=webpack://webpack-intro/./main.js?");
 
 /***/ })
 

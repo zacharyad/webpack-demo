@@ -1,45 +1,42 @@
-// IIFE --> phonetically iffy
+  // IIFE, phonetically Iffy
 
+    let numTimesClicked = 0;
 
-  let numTimesClicked = 0;
+     function win() {
+      alert('You win!');
+      reset();
+    }
 
-  function win() {
-    alert('You win!');
-    reset();
-  }
-
-  // this gets put into an object
-  export function reset() {
-    numTimesClicked = 0;
-  }
-// this gets put into an object
-  export function logSomeStuff(str){
-    console.log("some stuff HEYHEYHEYHEYHEYHEY _________", str)
-  }
+    export function consoleThatLog(){
+      console.log("hey i was logged")
+    }
+    
+    export function reset() {
+      numTimesClicked = 0;
+    }
     
 
-// export  
- export default function() {
+  //)()
+
+
+  // we can default export one thing and one thing only
+export default function() {
   numTimesClicked++;
-  console.log("You clicked", numTimesClicked);
+  console.log("cat");
   if (numTimesClicked === 10) win();
 }
 
-// default exports this is a variable you can reference
 
+  // click() //  is equal to ---> 
+    //function() {
+    //   numTimesClicked++;
+    //   console.log("You've been clicked.");
+    //   if (numTimesClicked === 10) win();
+    // }
 
-// one default, and as many named exports as you want
-
-
-
-// what is click = function() {
-  //   numTimesClicked++;
-  //   console.log("You clicked");
-  //   if (numTimesClicked === 10) win();
-  // }
-
-
-
+ 
+  
+  
 /*
   1) look at simple App
   2) What are issues with this app?
@@ -47,9 +44,9 @@
   4) Make it like node modules, to "share" code accross js files
   
   webpack = module bundler
-  1) we need that sweet npm code
-  2) we need to stell webpack what to do.
-    webpack.config.js
+  1) we need to install webpack and webpack-cli [ x ]
+  2) add script to package.json to build your files into a bundle
+  3) configure webpack
 
 
 */

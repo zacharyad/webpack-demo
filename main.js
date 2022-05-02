@@ -1,20 +1,15 @@
-const btn = document.getElementById('button');
-import click, {logSomeStuff, reset} from './game.js'
-import catSTring from './rando.js'
-// node modules --> import from
-// import click from './game.js'
-// import {logSomeStuff, reset} from './game.js'
+const button = document.getElementById('button');
+// const click = require("./game.js") this is no good in the front end
+ import click, {consoleThatLog as c, reset} from './game'
+//  import {consoleThatLog as c, reset} from './game'
 
-// entry is where all the code is going to be imported
-
-
-btn.addEventListener('click', function() {
-  click();
-  loggy(catSTring)
+ c();
+button.addEventListener('click', function() {
+  clickTheButtonFunc();
 });
 
 /*  
-    THREE MINUTES TO LOOK AT THESE FILES (main.js, index.html, )
+    THREE MINUTES TO LOOK AT THESE FILES 
     AND THEN TELL ME WHAT WILL BE/IS GOING ON IN THE "APP".
 */
 
